@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    command: postgres -c 'max_connections=10000' -c 'shared_buffers=256MB'
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+  redis:
+    image: "redis:alpine"
+#  web:
+#    build: .
+#    ports:
+#      - "5000:5000"
+#    volumes:
+#      - .:/code
+#    environment:
+#      FLASK_ENV: development

@@ -1,0 +1,7 @@
+venv/bin
+venv/include
+venv/lib
+.env
+.idea
+__pycache__
+testaddresses.csv
